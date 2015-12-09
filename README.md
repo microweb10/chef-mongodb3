@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/sunggun-yu/chef-mongodb3.svg?branch=master)](https://travis-ci.org/sunggun-yu/chef-mongodb3)
 
-Install and configure the MongoDB 3
+Install and configure the MongoDB 3.2 on Ubuntu 14.04
 
 * Install and configure the mongod (or configure the config server for shard cluster)
 * Install and configure the mongos
@@ -16,11 +16,7 @@ NOTICE :
 
 ## Supported Platforms
 
-* Ubuntu 12.04, 14.04
-* Debian 7.8
-* CentOS 6.6
-* Oralce 6.6
-* Amazon Linux
+* Ubuntu 12.04
 
 ## Attributes
 
@@ -31,8 +27,7 @@ WARNING : Please do not set the user and group attribute on your side. This cook
 
 ```
 # MongoDB version to install
-default['mongodb3']['version'] = '3.0.7'
-default['mongodb3']['package']['version'] = Actual package version to install. It builds from version attribute.
+default['mongodb3']['version'] = '3.2'
 
 # Package repository url
 default['mongodb3']['package']['repo']['url'] = Package repository url
