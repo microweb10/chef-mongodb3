@@ -1,8 +1,8 @@
 # MongoDB version to install
 default['mongodb3']['version'] = '3.2.0'
 
-# Setup default package version attribute to install
-pkg_version = node['mongodb3']['version']
+# MongoDB package version to install
+default['mongodb3']['package']['version'] = '3.2.0'
 
 # Setup default package repo url attribute for each platform family or platform
 pkg_repo = 'http://repo.mongodb.org/apt/ubuntu'
@@ -25,9 +25,6 @@ default['mongodb3']['package']['repo']['url'] = pkg_repo
 default['mongodb3']['package']['repo']['apt']['keyserver'] = apt_repo_keyserver
 default['mongodb3']['package']['repo']['apt']['key'] = 'EA312927'
 default['mongodb3']['package']['repo']['apt']['components'] = apt_repo_component
-
-# MongoDB package version to install
-default['mongodb3']['package']['version'] = pkg_version
 
 # MongoDB user:group
 default['mongodb3']['user'] = mongo_user
