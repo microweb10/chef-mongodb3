@@ -33,7 +33,7 @@ case node['platform_family']
     when 'ubuntu'
       apt_repository 'mongodb' do
         uri node['mongodb3']['package']['repo']['url']
-        distribution "#{node['lsb']['codename']}/mongodb-org/stable"
+        distribution "trusty/mongodb-org/3.2"
         components node['mongodb3']['package']['repo']['apt']['components']
         keyserver node['mongodb3']['package']['repo']['apt']['keyserver']
         key node['mongodb3']['package']['repo']['apt']['key']
@@ -42,7 +42,7 @@ case node['platform_family']
     when 'debian'
       apt_repository 'mongodb' do
         uri node['mongodb3']['package']['repo']['url']
-        distribution "trusty/mongodb-org/3.2"
+        distribution "#{node['lsb']['codename']}/mongodb-org/stable"
         components node['mongodb3']['package']['repo']['apt']['components']
         keyserver node['mongodb3']['package']['repo']['apt']['keyserver']
         key node['mongodb3']['package']['repo']['apt']['key']
