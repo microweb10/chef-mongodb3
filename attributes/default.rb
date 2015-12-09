@@ -1,5 +1,5 @@
 # MongoDB version to install
-default['mongodb3']['version'] = '3.2'
+default['mongodb3']['version'] = '3.2.0'
 
 # Setup default package version attribute to install
 pkg_version = node['mongodb3']['version']
