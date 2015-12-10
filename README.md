@@ -2,17 +2,13 @@
 
 [![Build Status](https://travis-ci.org/sunggun-yu/chef-mongodb3.svg?branch=master)](https://travis-ci.org/sunggun-yu/chef-mongodb3)
 
-Install and configure the MongoDB 3.2 on Ubuntu 14.04
+Install and configure the MongoDB 3.0 on Ubuntu 14.04
 
 * Install and configure the mongod (or configure the config server for shard cluster)
 * Install and configure the mongos
  * Also, mongos configure the mongos service with runit : `service mongos start|stop|restart|status` 
 * Install the MMS Automation Agent
 * Install the MMS Monitoring Agent
-
-NOTICE :
-* Current version 3.0.0 is not supporting mongos 3.0.7 for Oracle Linux 6.6. The package version 3.0.7-1.el6 of mongodb-org-shell package wasn't existing (Test failure).
-* Current version 3.0.0 is not supporting automation and monitoring mms agent installation for Debian 7.8
 
 ## Supported Platforms
 
@@ -27,7 +23,8 @@ WARNING : Please do not set the user and group attribute on your side. This cook
 
 ```
 # MongoDB version to install
-default['mongodb3']['version'] = '3.2'
+default['mongodb3']['version'] = '3.0.4'
+default['mongodb3']['package']['version'] = '3.0.4'
 
 # Package repository url
 default['mongodb3']['package']['repo']['url'] = Package repository url
