@@ -4,13 +4,6 @@ default['mongodb3']['version'] = '3.0.4'
 # MongoDB package version to install
 default['mongodb3']['package']['version'] = '3.0.4'
 
-# Setup default package repo url attribute for each platform family or platform
-pkg_repo = 'http://repo.mongodb.org/apt/ubuntu'
-
-# Setup apt variables
-apt_repo_keyserver = 'hkp://keyserver.ubuntu.com:80'
-apt_repo_component = ['multiverse']
-
 # Default attribute for MongoDB installation
 mongo_user = 'mongodb'
 mongo_group = 'mongodb'
@@ -19,12 +12,12 @@ mongo_pid_file = nil
 config_processManagement_fork = nil
 
 # MongoDB package repo url
-default['mongodb3']['package']['repo']['url'] = pkg_repo
+default['mongodb3']['package']['repo']['url'] = 'http://repo.mongodb.org/apt/ubuntu'
 
 # MongoDB apt keyserver and key
-default['mongodb3']['package']['repo']['apt']['keyserver'] = apt_repo_keyserver
+default['mongodb3']['package']['repo']['apt']['keyserver'] = 'hkp://keyserver.ubuntu.com:80'
 default['mongodb3']['package']['repo']['apt']['key'] = '7F0CEB10'
-default['mongodb3']['package']['repo']['apt']['components'] = apt_repo_component
+default['mongodb3']['package']['repo']['apt']['components'] = ['multiverse']
 
 # MongoDB user:group
 default['mongodb3']['user'] = mongo_user
